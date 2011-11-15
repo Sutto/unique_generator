@@ -10,6 +10,14 @@ module UniqueGenerator
   end
   setup!
 
+  if defined?(Rails::Railtie)
+    class Railtie < Rails::Railtie
+      initializer "unique_generator.initialize" do
+        UniqueGenerator.setup!
+      end
+    end
+  end
+
   CHOICES = (Array('A'..'Z') + Array('a'..'z') + Array('0'..'9'))
 
   included do
