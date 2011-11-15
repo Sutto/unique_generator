@@ -6,12 +6,10 @@ Gem::Specification.new do |s|
   s.name        = "unique_generator"
   s.version     = UniqueGenerator::VERSION
   s.authors     = ["Darcy Laycock"]
-  s.email       = ["sutto@sutto.net"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
-
-  s.rubyforge_project = "unique_generator"
+  s.email       = ["darcy@filtersquad.com"]
+  s.homepage    = "http://github.com/filtersquad/unique_generator"
+  s.summary     = %q{Makes generating unique fields in MongoMapper and ActiveRecord easy.}
+  s.description = %q{ActiveRecord, MongoMapper and general tools for generating unique values e.g. api keys and tokens.}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
