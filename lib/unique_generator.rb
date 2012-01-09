@@ -8,15 +8,6 @@ module UniqueGenerator
     ActiveRecord::Base.send(:include, self) if defined?(ActiveRecord::Base)
     MongoMapper::Document.plugin(self)      if defined?(MongoMapper::Document)
   end
-  setup!
-
-  if defined?(Rails::Railtie)
-    class Railtie < Rails::Railtie
-      initializer "unique_generator.initialize" do
-        UniqueGenerator.setup!
-      end
-    end
-  end
 
   CHOICES = (Array('A'..'Z') + Array('a'..'z') + Array('0'..'9'))
 
@@ -81,6 +72,16 @@ module UniqueGenerator
       end
     end
     
+  end
+
+  setup!
+
+  if defined?(Rails::Railtie)
+    class Railtie < Rails::Railtie
+      initializer "unique_generator.initialize" do
+        UniqueGenerator.setup!
+      end
+    end
   end
   
 end
