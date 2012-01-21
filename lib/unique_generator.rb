@@ -61,18 +61,16 @@ module UniqueGenerator
     
   end
   
-  module InstanceMethods
     
-    # Generate unique field.
-    def generate_unique_field!(name, size = 32)
-      return if send(name).present?
-      self.class.generate_unique(size) do |token|
-        send "#{name}=", token
-        unique_field? name
-      end
+  # Generate unique field.
+  def generate_unique_field!(name, size = 32)
+    return if send(name).present?
+    self.class.generate_unique(size) do |token|
+      send "#{name}=", token
+      unique_field? name
     end
-    
   end
+    
 
   setup!
 
