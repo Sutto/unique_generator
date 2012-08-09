@@ -12,4 +12,4 @@ end
 
 gem "sqlite3"
 gem "bson_ext"
-gem "ci_reporter"
+gem "rake"
