@@ -44,7 +44,7 @@ module UniqueGenerator
     end
 
   end
-  
+
   module ClassMethods
 
     # Generate a unique field
@@ -58,10 +58,10 @@ module UniqueGenerator
     def generate_random(length = 32)
       (1..length).inject("") { |token, _| token << CHOICES.sample }
     end
-    
+
   end
-  
-    
+
+
   # Generate unique field.
   def generate_unique_field!(name, size = 32)
     return if send(name).present?
@@ -70,7 +70,7 @@ module UniqueGenerator
       unique_field? name
     end
   end
-    
+
 
   setup!
 
@@ -81,5 +81,5 @@ module UniqueGenerator
       end
     end
   end
-  
+
 end
