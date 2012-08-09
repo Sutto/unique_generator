@@ -3,7 +3,7 @@
 ## Introduction
 
 Unique Generator is a plugin for ActiveRecord and MongoMapper which makes it simple to generate
-unique fields and unique tokens.
+unique fields and unique tokens e.g. for invites, api keys and the like.
 
 Unique Generator is only available for Rails 3.0+.
 
