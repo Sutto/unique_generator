@@ -1,4 +1,4 @@
-# Unique Generator [![Build Status](https://secure.travis-ci.org/filtersquad/unique_generator.png?branch=master)](http://travis-ci.org/filtersquad/rocket_pants) [![Dependency Status](https://gemnasium.com/filtersquad/rocket_pants.png)](https://gemnasium.com/filtersquad/unique_generator)
+# Unique Generator [![Build Status](https://secure.travis-ci.org/filtersquad/unique_generator.png?branch=master)](http://travis-ci.org/filtersquad/unique_generator) [![Dependency Status](https://gemnasium.com/filtersquad/unique_generator.png)](https://gemnasium.com/filtersquad/unique_generator)
 
 ## Introduction
 
