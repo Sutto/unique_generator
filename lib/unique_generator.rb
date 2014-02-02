@@ -36,7 +36,7 @@ module UniqueGenerator
         scope = self.class.where(field_name => send(field_name))
         # When we have an id, check for those with a different id.
         if id.present?
-          conditions = self.class.all.table[:id].eq(id).not
+          conditions = self.class.arel_table[:id].eq(id).not
           scope = scope.where(conditions)
         end
         scope.empty?
